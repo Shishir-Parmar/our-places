@@ -11,6 +11,9 @@ function addPlaceHandler(placeData){
         {
             method: "POST",
             body: JSON.stringify(placeData),
+            headers: {
+                'Content-Type' : 'application/json',
+            },
         }
     ).then(()=> {
         history.replace('/');
